@@ -1,0 +1,139 @@
+// FOOTER footer -------------------------------------------------
+
+.footer {
+    background: $color-black-light;
+    color: $color-white;
+    padding-bottom: 80px;
+
+    .footer-image {
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer-contact-bar {
+        display: flex;
+        color: $color-grey-light;
+        justify-content: space-between;
+        padding-top: 115px;
+
+        p {
+            padding-top: 54px;
+            margin: 0;
+            color: $color-grey-light;
+        }
+
+        h4 {
+            color: $color-white;
+        }
+
+        .footer-contact-email {
+            padding-top: 35px;
+
+            h4, p {
+                text-align: left;
+            }
+
+            h4 {
+                position: relative;
+
+                &:before {
+                    content: '';
+                    width: 50px;
+                    border-bottom: solid 1px $color-grey-medium;
+                    position: absolute;
+                    left: 0;
+                    top: 35px;
+                    z-index: 1;
+                }
+
+                &:after {
+                    content: '';
+                    width: 25px;
+                    border-bottom: solid 1px $color-grey-medium;
+                    position: absolute;
+                    left: 0;
+                    top: 38px;
+                    z-index: 1;
+                }
+            }
+        }
+
+        .footer-contact-description {
+            display: flex;
+            flex-direction: column;
+            font-style: italic;
+            text-align: center;
+        }
+
+        .footer-location {
+            padding-top: 35px;
+
+            h4, p {
+                text-align: right;
+            }
+
+            h4{
+              position: relative;
+
+              &:before {
+                  content: '';
+                  width: 50px;
+                  border-bottom: solid 1px $color-grey-medium;
+                  position: absolute;
+                  right: 0;
+                  top: 35px;
+                  z-index: 1;
+              }
+
+              &:after {
+                  content: '';
+                  width: 25px;
+                  border-bottom: solid 1px $color-grey-medium;
+                  position: absolute;
+                  right: 0;
+                  top: 38px;
+                  z-index: 1;
+              }
+            }
+        }
+    }
+
+    .footer-media-belt {
+        display: flex;
+        justify-content: center;
+        padding-top: 50px;
+
+        li a {
+            height: 45px;
+            width: 45px;
+            margin: 5px;
+            padding: 14px;
+            border: 1px solid $color-white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: $color-white;
+
+            &:hover {
+                background: $color-gold;
+                border-color: $color-gold;
+                color: $color-black-dark;
+            }
+        }
+    }
+}
+
+// media queries ----------------------------------------------------
+
+@media (max-width: 1024px) {
+
+}
+
+@media (max-width:768px) {
+
+}
+
+@media (max-width:480px) {
+
+}

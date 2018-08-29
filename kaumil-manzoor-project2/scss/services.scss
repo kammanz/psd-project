@@ -1,0 +1,119 @@
+// services ---------------------------------
+
+.services {
+    background: $color-black-light;
+    color: $color-white;
+    display: flex;
+    position: relative;
+
+    &-left {
+        width: 50%;
+        background: $color-black-light;
+        display:flex;
+        justify-content: flex-end;
+        padding: 100px 80px;
+        position: relative;
+
+        &-products {
+            width: 485px;
+
+            h3, h4, p {
+                font-weight: 400;
+                text-align: right;
+            }
+
+            h3 {
+              position: relative;
+
+              &:before {
+                  content: '';
+                  width: 50px;
+                  border-bottom: solid 1px $color-grey-medium;
+                  position: absolute;
+                  right: 4px;
+                  top: 35px;
+                  z-index: 1;
+              }
+
+              &:after {
+                  content: '';
+                  width: 25px;
+                  border-bottom: solid 1px $color-grey-medium;
+                  position: absolute;
+                  right: 4px;
+                  top: 38px;
+                  z-index: 1;
+                }
+            }
+
+            h4 {
+                color: $color-gold;
+                margin-top: 60px;
+            }
+
+            p {
+                color: $color-white;
+                margin-top: 28px;
+            }
+        }
+    }
+    &-right {
+        width: 50%;
+        background: url(assets/woman-with-goat-face.png);
+        background-size: cover;
+        background-position: center;
+        position: relative;
+    }
+
+    .font-container {
+        position: absolute;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        left: calc(50% - 45px);
+
+        .awesome-button {
+            width: 90px;
+            height: 90px;
+            background: $color-white;
+            background-clip: padding-box;
+
+            i {
+                color: $color-gold;
+                font-size: 30px;
+            }
+        }
+    }
+
+}
+
+// media queries ----------------------------------------------------
+
+@media (max-width: 1024px) {
+    .services {
+        .font-container {
+            left: calc(50% - 30px);
+
+            .awesome-button {
+                width: 60px;
+                height: 60px;
+            }
+        }
+    }
+}
+
+@media (max-width:768px) {
+    .services {
+        &-left {
+            width: 100%;
+            padding: 50px;
+        }
+        &-right {
+            display: none;
+        }
+        .font-container {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,66 @@
+
+// fun-facts ----------------------------
+
+.fun-facts {
+    background: url(assets/fun-facts-background.png);
+    background-size: cover;
+    color: white;
+
+    p {
+        color: white;
+        text-transform: uppercase;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    h3 {
+        padding-top: 100px;
+    }
+
+    &-body {
+        padding: 90px 0 120px 0;
+        display: flex;
+        justify-content: space-between;
+
+        .fun-box {
+            width: 23%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 2px solid white;
+            padding: 50px;
+
+            .i-tags-are-annoying {
+                    background: $color-white;
+                    width: 60px;
+                    height: 60px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                i {
+                    font-size: 24px;
+                    padding: 18px;
+                    color: $color-gold;
+                }
+            }
+
+            h2 {
+                padding-top: 40px;
+                font-size: 40px;
+            }
+        }
+    }
+}
+
+// media queries ----------------------------------------------------
+
+@media (max-width: 1024px) {
+    .fun-facts{
+        .fun-box {
+            h2 {
+                font-size: 25px;
+            }
+        }
+    }
+}

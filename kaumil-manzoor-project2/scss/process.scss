@@ -1,0 +1,179 @@
+
+// process -----------------------------
+
+.process {
+    background: $color-grey-light;
+    position: relative;
+    padding-bottom: 124px;
+
+    .awesome-button {
+        position: absolute;
+        top: -35px;
+        left: calc(50% - 35px);
+    }
+
+    h3 {
+        padding-top: 120px;
+    }
+
+    img {
+        height: 4px;
+        width: 6px;
+    }
+
+    p {
+        text-align: center;
+    }
+
+    &-buttons {
+        display: flex;
+        justify-content: center;
+        padding-top: 30px;
+
+        button {
+            color: $color-black-light;
+            border: 1px solid $color-black-light;
+            background: transparent;
+            margin: 0 5px;
+
+            &:hover {
+                color: $color-grey-light;
+                background: $color-gold;
+                border-color: $color-gold;
+            }
+        }
+    }
+
+    &-body {
+        position: relative;
+        margin-top: 60px;
+
+        img {
+            width: 585px;
+            height: auto;
+        }
+
+        &-right {
+            position: absolute;
+            right: 8px;
+            top: 46px;
+            width: 635px;
+            background: $color-white;
+            padding: 65px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .i-tags-are-annoying {
+                height: 80px;
+                width: 80px;
+                margin: 0 auto;
+                border-radius: 50%;
+                background: $color-black-dark;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 20px;
+
+                i {
+                    color: $color-white;
+                    font-size: 30px;
+                }
+            }
+
+            h3 {
+                padding: 0;
+                font-size: 16px;
+                letter-spacing: 2px;
+                margin-top: 45px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            h3::after {
+                content: "";
+                display: block;
+                width: 30px;
+                border-bottom: 1px solid $color-grey-bold;
+                padding-top: 20px;
+            }
+
+            p {
+                margin-top: 30px;
+            }
+
+            .submit-button {
+                display: flex;
+                align-items: center;
+                width: 120px;
+                height: 35px;
+                color: $color-white;
+                background: $color-gold;
+                margin-top: 40px;
+                font-size: 11px;
+                justify-content: center;
+                padding: 0;
+            }
+
+            .link-belt {
+                display: flex;
+                margin-top: 60px;
+                a {
+                    color: $color-grey-light;
+                    font-family: 'Droid Serif', serif;
+                    font-size:25px;
+                    padding: 0  10px;
+
+                    &:hover {
+                        text-decoration: underline;
+                        color: $color-gold;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// media queries ----------------------------------------------------
+
+@media (max-width: 1024px) {
+    .process {
+        &-body {
+            img {
+                width: 525px;
+            }
+            &-right {
+                padding: 50px 20px;
+                width: 570px;
+                top: 36px;
+
+                .skill {
+                  width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:768px) {
+    .process {
+        &-body {
+            &-left {
+                height: 200px;
+                overflow: hidden;
+
+                img {
+                    margin-top: -195px;
+                    width: 100%;
+                }
+            }
+            &-right {
+                position: relative;
+                width: 100%;
+                top: 0;
+                right: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,171 @@
+// global styles -----------------------------------
+
+body {
+    font-family: 'Droid Serif', serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size:20px;
+    letter-spacing: 4px;
+}
+
+h4 {
+    font-size: 14px;
+}
+
+p {
+    font-size: 12px;
+    font-family: 'Droid Serif', serif;
+    color: $color-black-light;
+    line-height: 25px;
+}
+
+
+a {
+    text-decoration: none;
+    padding: 20px;
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+li {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    padding: 5px;
+}
+
+.droid-serif {
+    font-family: 'Droid Serif', serif;
+    font-weight: 400;
+}
+
+
+.wrapper {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+.carousel {
+
+    &-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &-buttons {
+        width: 50px;
+        height: 4px;
+        margin: 5px;
+        background: $color-white-transparent;
+
+        &:hover {
+            background: $color-gold;
+        }
+    }
+}
+
+.vertical {
+    position: absolute;
+    top: 50%;
+    left: -60px;
+    transform: rotate(90deg);
+}
+
+.rotate {
+  transform: rotate(90deg);
+}
+
+.awesome-button {
+    background: $color-gold;
+    border-radius: 50%;
+    border: 6px solid $color-white-transparent;
+    color: white;
+    position: relative;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-clip: padding-box;
+
+    i {
+        font-size: 20px;
+    }
+}
+
+.underline {
+    display: flex;
+    justify-content: center;
+
+    &-wrapper {
+        position: relative;
+        width: 114px;
+        height: 15px;
+        margin: 10px;
+        text-align: center;
+
+        &:after {
+            content: '';
+            width: 50px;
+            border-bottom: solid 1px $color-grey-bold;
+            position: absolute;
+            right: 0;
+            top: 5px;
+            z-index: 1;
+        }
+        &:before {
+            content: '';
+            width: 50px;
+            border-bottom: solid 1px $color-grey-bold;
+            position: absolute;
+            left: 0;
+            top: 5px;
+            z-index: 1;
+        }
+    }
+    &-outer {
+        position: absolute;
+        left: 51px;
+        display: flex;
+        width: 11px;
+        height: 11px;
+        transform: rotate(45deg);
+        border-right: 1px solid $color-grey-bold;
+        border-bottom: 1px solid $color-grey-bold;
+    }
+
+    &-inner {
+         display: block;
+         width: 6px;
+         height: 6px;
+         margin-left: 2px;
+         margin-top: 2px;
+         background: $color-gold;
+    }
+}

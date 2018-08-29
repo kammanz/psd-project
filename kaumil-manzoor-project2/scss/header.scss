@@ -1,0 +1,183 @@
+// HEADER header -----------------------------------------
+
+
+.header {
+    background: url(assets/header.jpg);
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+
+
+    nav  {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 20px;
+    }
+
+    #menu-toggle {
+        display: none;
+    }
+
+    .label-toggle {
+        display: none;
+    }
+
+    &-logo {
+        padding-left: 30px;
+    }
+
+    &-links {
+        display: flex;
+        flex-grow: 2;
+        justify-content: center;
+
+        a {
+        padding: 10px 20px;
+        font-size: 12px;
+        letter-spacing: 2px;
+        color: $color-white;
+        text-transform:uppercase;
+
+            &:hover {
+                color: $color-gold;
+                border: 1px solid $color-gold;
+                padding: 9px 19px;
+            }
+
+
+
+        }
+    }
+
+    &-social {
+        display: flex;
+        width: 100px;
+        margin-right: 40px;
+        justify-content: space-between;
+
+        a {
+            padding: 0;
+        }
+        i {
+            color: $color-white;
+
+            &:hover {
+                color: $color-gold;
+            }
+        }
+    }
+
+    &-hero {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: calc(100vh - 181px);
+
+        h2 {
+            color: $color-white;
+        }
+
+        h1 {
+            padding-top:25px;
+            font-size: 75px;
+            letter-spacing: 5px;
+            line-height: 79px;
+            color:$color-white;
+
+            span {
+                color: $color-gold;
+            }
+        }
+    }
+}
+
+// media queries ----------------------------------------------------
+
+@media (max-width: 1024px) {
+    .header {
+       &-links {
+            a {
+                padding: 5px 10px;
+                font-size: 10px;
+                &:hover {
+                    padding: 4px 9px;
+                }
+            }
+        }
+
+        &-social {
+            width: 70px;
+            margin-right: 20px;
+        }
+    }
+}
+
+@media (max-width:768px) {
+    .header {
+        nav {
+            background: $color-white-light-transparent;
+            padding:20px 0;
+        }
+
+        ul {
+            width: 100%;
+            display: none;
+            padding-left: 30px;
+        }
+
+        #menu-toggle {
+            &:checked {
+                &~ ul {
+                    opacity: 1;
+                    position: absolute;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+
+                }
+                &~ .header-links {
+                    top: 90px;
+                }
+
+                &~ .header-social {
+                    top: 250px;
+                    a {
+                        padding: 5px 10px;
+                    }
+                }
+            }
+
+        }
+
+        .label-toggle {
+            background: linear-gradient(to bottom, $color-white 0%, $color-white 20%, transparent 20%, transparent 40%, $color-white 40%, $color-white 60%, transparent 60%, transparent 80%, $color-white 80%, $color-white 100%); //Gradient Hamburger
+            cursor: pointer;
+            display: block;
+            float: right;
+            height: 35px;
+            width: 45px;
+            margin-right: 30px;
+        }
+
+        &-hero {
+            h2 {
+                font-size: 15px;
+            }
+
+            h1 {
+                padding-top: 10px;
+                font-size: 40px;
+                line-height: 40px;
+                letter-spacing: 3px;
+            }
+        }
+    }
+
+}
+
+@media (max-width:480px) {
+
+
+}

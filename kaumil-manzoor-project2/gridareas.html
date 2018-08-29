@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+    .parent {
+    background: darkcyan;
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    grid-template-areas: 
+        "header header aside" 
+        "pizza pizza aside" 
+        "footer footer footer";
+}
+.child {
+    border: 1px solid cyan;
+    padding: 20px;
+}
+.child:first-child {
+    grid-area: header;
+    background: #27474E;
+}   
+.child:nth-child(2){
+    grid-area: pizza;
+    background: #3F826D;
+}   
+.child:nth-child(3) {
+    grid-area: aside;
+    background: #63ADF2;
+}   
+.child:last-child {
+    grid-area: footer;
+    background: #04395E;
+}
+    </style>
+</head>
+<body>
+    <section class="parent">
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+    </section>
+    
+</body>
+</html>

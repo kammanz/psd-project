@@ -1,0 +1,155 @@
+// say ----------------------------------------------
+
+.say {
+    position: relative;
+    padding-top: 120px;
+    background: $color-grey-dark;
+    color: white;
+
+    .awesome-button {
+        position: absolute;
+        top: -35px;
+        left: calc(50% - 35px);
+    }
+
+    .say-body {
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        margin: 0 auto;
+
+        blockquote {
+            padding-top: 90px;
+            text-align: center;
+            font-size: 12px;
+        }
+
+        h4 {
+            padding-top: 46px;
+
+            span {
+                font-style: italic;
+                font-size: 12px;
+                font-family: 'Droid Serif', serif;
+                text-transform: capitalize;
+            }
+        }
+    }
+
+    .say-footer {
+        .say-star-belt {
+            display: flex;
+            justify-content: center;
+            padding-top: 12px;
+
+            i {
+                font-size: 12px;
+                color: $color-gold;
+                padding: 2px;
+            }
+        }
+
+        .say-circle-belt {
+            display: flex;
+            width: 30px;
+            margin: 0 auto;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 60px;
+
+            .small-circle {
+                height: 6px;
+                width: 6px;
+                background: $color-grey-light;
+                border-radius: 50%;
+            }
+
+            .medium-circle {
+                height: 8px;
+                width: 8px;
+                border-radius: 50%;
+                border: 1px solid $color-white;
+
+            }
+        }
+
+        .say-branding-belt {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 100px;
+            position: relative;
+
+            div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 234px;
+                height: 160px;
+                padding: 40px 68px;
+                border-right: 1px solid $color-grey-light;
+                background: $color-grey-medium;
+
+                &:nth-child(6) {
+                    border-right: none;
+                }
+            }
+
+            i {
+                font-size: 12px;
+                padding: 12px 14px;
+                background: $color-white;
+                color: black;
+
+
+                &:hover {
+                    background: $color-gold;
+                }
+            }
+
+            .fa-caret-left {
+                position: absolute;
+                left: -15px;
+            }
+
+            .fa-caret-right {
+                position: absolute;
+                right: -15px;
+            }
+        }
+    }
+}
+
+// media queries ----------------------------------------------------
+
+@media (max-width: 1024px) {
+    .contact {
+      p {
+        width: 0;
+      }
+      form .contact-body {
+          flex-direction: column;
+
+          .contact-inputs {
+              width: 100%;
+
+              input {
+                  margin-bottom: 15px;
+              }
+          }
+
+          textarea {
+              width: 100%;
+          }
+      }
+    }
+
+}
+
+@media (max-width:768px) {
+
+}
+
+@media (max-width:480px) {
+
+}

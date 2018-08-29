@@ -1,0 +1,209 @@
+// who-we-are ---------------------------------------
+
+.who-we-are {
+    background: $color-grey-light;
+    position: relative;
+
+    .awesome-button {
+        position: absolute;
+        top: -35px;
+        left: calc(50% - 35px);
+    }
+
+    h3 {
+        padding-top: 120px;
+    }
+
+    img {
+        height: 4px;
+        width: 6px;
+    }
+
+    &-content {
+        display: flex;
+        justify-content: center;
+
+        &-text {
+            width: 950px;
+            text-align: center;
+        }
+    }
+
+    &-buttons {
+        display: flex;
+        justify-content: center;
+        padding-top: 30px;
+
+        button {
+                color: $color-black-light;
+                border: 2px solid $color-black-light;
+                background: transparent;
+                margin: 0 5px;
+                width: 120px;
+                height: 35px;
+                font-weight: 400;
+                font-size: 11px;
+
+            &:hover {
+                color: $color-white;
+                background: $color-gold;
+                border-color: $color-gold;
+            }
+        }
+    }
+
+    &-body {
+        position: relative;
+        margin-top: 100px;
+        padding-bottom: 132px;
+
+        img {
+            width: 585px;
+            height: auto;
+        }
+
+        &-right {
+            position: absolute;
+            right: 8px;
+            top: 66px;
+            width: 635px;
+            background: $color-white;
+            padding: 65px;
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+
+            h3 {
+                margin-top: 20px;
+                padding: 0;
+                position: relative;
+
+                span {
+                    font-weight: 400;
+                }
+
+                &:before {
+                    content: '';
+                    width: 50px;
+                    border-bottom: solid 1px #c4c4c4;
+                    position: absolute;
+                    left: 0;
+                    top: 35px;
+                    z-index: 1;
+                }
+
+                &:after {
+                    content: '';
+                    width: 25px;
+                    border-bottom: solid 1px #c4c4c4;
+                    position: absolute;
+                    left: 0;
+                    top: 38px;
+                    z-index: 1;
+                }
+            }
+
+            p {
+                margin: 50px 0 0 0;
+            }
+            h4 {
+                margin-top: 60px;
+                font-weight: 400;
+            }
+        }
+    }
+
+    .skill {
+        margin-top: 30px;
+
+        &-bottom {
+            position: relative;
+        }
+
+        &-line {
+            background: $color-grey-light;
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            top:9px;
+            z-index:1;
+        }
+
+        img {
+            height: 10px;
+            z-index: 2;
+            position: relative;
+        }
+
+        .arrow1 {
+            width: 261px;
+        }
+
+        .arrow2 {
+            width: 391px;
+        }
+
+        .arrow3 {
+            width: 209px;
+        }
+
+        .arrow4 {
+            width: 495px;
+        }
+
+        .skill-top {
+            display: flex;
+            justify-content: space-between;
+
+            p {
+                margin: 0;
+                padding: 0;
+                font-style: italic;
+            }
+        }
+    }
+}
+
+
+// media queries ----------------------------------------------------
+
+@media (max-width: 1024px) {
+   .who-we-are {
+       &-body {
+           img {
+               width: 525px;
+           }
+           &-right {
+               padding: 50px 35px;
+               width: 570px;
+               top: 36px;
+
+               .skill {
+                 width: 100%;
+               }
+           }
+       }
+   }
+}
+
+@media (max-width:768px) {
+    .who-we-are {
+        &-body {
+            &-left {
+                height: 200px;
+                overflow: hidden;
+
+                img {
+                    margin-top: -110px;
+                    width: 100%;
+                }
+            }
+            &-right {
+                position: relative;
+                width: 100%;
+                top: 0;
+                right: 0;
+            }
+        }
+    }
+}
